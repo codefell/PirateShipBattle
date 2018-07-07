@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -252,457 +252,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &180634326
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1000012392585416, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 180634332}
-  - component: {fileID: 180634331}
-  - component: {fileID: 180634330}
-  - component: {fileID: 180634329}
-  - component: {fileID: 180634328}
-  - component: {fileID: 180634327}
-  m_Layer: 0
-  m_Name: ExplosionPrefabObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &180634327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000013987216644, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 180634326}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78b5a2334401d124a851a06e5bbf371e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  edit_autoGenerate: 1
-  edit_fileRefreshLastTimeTicks: 636434208139685051
-  edit_generateFoldout: 1
-  edit_settingsFoldout: 1
-  edit_previewFoldout: 1
-  edit_birthRate: 1
-  edit_visibleOnly: 1
-  edit_velocityMin: 10
-  edit_velocityMax: 30
-  edit_explosionTime: 0
-  edit_explosionLifeTime: 3
-  edit_autoSetExplosionCenter: 1
-  explosionCenter: {x: 0, y: 0, z: 0}
-  explosionRotate: 10
-  meshes:
-  - mesh: {fileID: 4304156, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-    materialIndexes: 00000000
-    bakeMesh: {fileID: 4311766, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-  materials:
-  - {fileID: 2129114, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-  edit_bakeFoldout: 1
---- !u!64 &180634328
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 64000010434256532, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 180634326}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4309328, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
---- !u!95 &180634329
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 95000011638939884, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 180634326}
-  m_Enabled: 1
-  m_Avatar: {fileID: 90000013805267036, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-  m_Controller: {fileID: 9100000, guid: 5b35acdd13ce84449ab36078d7974c72, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &180634330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000014084747336, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 180634326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81fb345c042789f47964ec23c60c7fe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  advancedMode: 0
-  voxelFilePath: D:/Program/Unity/VoxelImporter/Assets/VoxelImporter/Examples/VoxelFiles/SD
-    Human.vox
-  voxelFileGUID: 
-  voxelFileObject: {fileID: 102900000, guid: 01b362e6f676db244a593f297c946457, type: 3}
-  voxelFileSubIndex: 0
-  fileType: 0
-  fileRefreshLastTimeTicks: 636434208139685051
-  dataVersion: 0
-  legacyVoxImport: 0
-  importMode: 1
-  importFlags: 0
-  importScale: {x: 1, y: 1, z: 1}
-  importOffset: {x: 0, y: 0, z: 0}
-  localOffset: {x: -10, y: 0, z: -10.5}
-  enableFaceFlags: -1
-  combineFaces: 1
-  ignoreCavity: 1
-  voxelStructure: {fileID: 0}
-  generateLightmapUVs: 0
-  meshFaceVertexOffset: 0
-  generateMipMaps: 1
-  updateMeshRendererMaterials: 1
-  updateMaterialTexture: 1
-  loadFromVoxelFile: 0
-  materialData:
-  - materialList: []
-    name: 
-    transparent: 0
-    material:
-      renderingMode: 0
-      metallic: 0
-      smoothness: 0
-      alpha: 0
-      emission: {r: 0, g: 0, b: 0, a: 0}
-      emissionPower: 0
-  materialIndexes: 00000000
-  edit_importFoldout: 1
-  edit_objectFoldout: 1
-  edit_helpEnable: 0
-  edit_configureMode: 0
-  edit_configureMaterialIndex: 0
-  edit_materialMode: 0
-  edit_materialTypeMode: 0
-  edit_MaterialPreviewMode: 0
-  edit_snapToHalfVoxel: 1
-  edit_enableMesh: []
-  mesh: {fileID: 4309328, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-  material: {fileID: 0}
-  materials:
-  - {fileID: 2199730, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-  atlasTexture: {fileID: 2890966, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-  rigAnimationType: 1
-  avatar: {fileID: 90000013805267036, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-  updateAnimatorAvatar: 1
-  humanDescription:
-    firstAutomapDone: 0
-    bones:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    upperArmTwist: 0.5
-    lowerArmTwist: 0.5
-    upperLegTwist: 0.5
-    lowerLegTwist: 0.5
-    armStretch: 0.05
-    legStretch: 0.05
-    feetSpacing: 0
-    hasTranslationDoF: 0
-  skinnedMeshBoundsUpdate: 1
-  skinnedMeshBoundsUpdateScale: {x: 1.5, y: 1.5, z: 1.5}
-  bones:
-  - {fileID: 350210556}
-  - {fileID: 2121728555}
-  - {fileID: 1131044653}
-  - {fileID: 1884059051}
-  - {fileID: 1488346781}
-  - {fileID: 1477227916}
-  - {fileID: 1352425787}
-  bindposes:
-  - e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: -3.5
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
-  - e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: -5.5
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
-  - e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: -7.5
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
-  - e00: 1
-    e01: 0
-    e02: 0
-    e03: 2
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: -5.5
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
-  - e00: 1
-    e01: 0
-    e02: 0
-    e03: -2
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: -5.5
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
-  - e00: 1
-    e01: 0
-    e02: 0
-    e03: 1.5
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: -2.5
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
-  - e00: 1
-    e01: 0
-    e02: 0
-    e03: -1.5
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: -2.5
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
-  editMode: 0
-  editLastMode: 1
-  edit_voxelMode: 1
-  edit_voxelWeightMode: 1
-  edit_vertexWeightMode: 0
-  edit_blendMode: 2
-  edit_weight: 1
-  edit_autoNormalize: 1
-  edit_brushRadius: 10
-  edit_brushCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  edit_WeightPreviewMode: 0
-  edit_mirrorPosition: 020000000100000001000000
-  edit_mirrorRotation: 000000000100000001000000
-  edit_mirrorScale: 010000000100000001000000
-  edit_animationFoldout: 1
---- !u!137 &180634331
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 137000011843953660, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 180634326}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 2199730, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4309328, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-  m_Bones:
-  - {fileID: 350210555}
-  - {fileID: 2121728554}
-  - {fileID: 1131044652}
-  - {fileID: 1884059050}
-  - {fileID: 1488346780}
-  - {fileID: 1477227915}
-  - {fileID: 1352425788}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 350210555}
-  m_AABB:
-    m_Center: {x: 0, y: 4, z: -0.5}
-    m_Extent: {x: 9, y: 11.25, z: 6}
-  m_DirtyAABB: 0
---- !u!4 &180634332
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4000010861224954, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 180634326}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 350210555}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &292694155
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,69 +370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleRebirth: {fileID: 2022220311}
   toggleRealtimeBake: {fileID: 568787467}
---- !u!1 &350210554
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1000010708376032, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 350210555}
-  - component: {fileID: 350210556}
-  m_Layer: 0
-  m_Name: Hips
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &350210555
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4000012924563998, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 350210554}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2121728554}
-  - {fileID: 1477227915}
-  - {fileID: 1352425788}
-  m_Father: {fileID: 180634332}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &350210556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000014289031316, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 350210554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mirrorBone: {fileID: 0}
-  boneIndex: 0
-  bonePositionSave: 1
-  bonePosition: {x: 0, y: 3.5, z: 0}
-  boneRotation: {x: 0, y: 0, z: 0, w: 0}
-  weightData:
-    weightKeys: []
-    weightValues: []
-  edit_weightMesh: []
-  edit_weightColorTexture: {fileID: 0}
-  edit_disablePositionAnimation: 0
-  edit_disableRotationAnimation: 0
-  edit_disableScaleAnimation: 1
-  edit_mirrorSetBoneAnimation: 1
-  edit_mirrorSetBonePosition: 1
-  edit_mirrorSetBoneWeight: 0
-  edit_objectFoldout: 1
 --- !u!1 &568787465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,6 +593,632 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &680531690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000013134529980, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 680531691}
+  - component: {fileID: 680531692}
+  m_Layer: 0
+  m_Name: Chest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &680531691
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000014038427910, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 680531690}
+  m_LocalRotation: {x: -0.2588186, y: -0, z: -0, w: 0.965926}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1273759648}
+  - {fileID: 698996002}
+  - {fileID: 1044882889}
+  m_Father: {fileID: 729456598}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &680531692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000012679857408, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 680531690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorBone: {fileID: 0}
+  boneIndex: 1
+  bonePositionSave: 1
+  bonePosition: {x: 0, y: 2, z: 0}
+  boneRotation: {x: 0, y: 0, z: 0, w: 0}
+  weightData:
+    weightKeys:
+    - x: 9
+      y: 6
+      z: 11
+    - x: 9
+      y: 6
+      z: 9
+    - x: 9
+      y: 6
+      z: 10
+    - x: 9
+      y: 5
+      z: 10
+    - x: 9
+      y: 5
+      z: 9
+    - x: 9
+      y: 5
+      z: 11
+    - x: 9
+      y: 4
+      z: 9
+    - x: 9
+      y: 4
+      z: 10
+    - x: 9
+      y: 4
+      z: 11
+    - x: 8
+      y: 5
+      z: 10
+    - x: 8
+      y: 5
+      z: 9
+    - x: 8
+      y: 5
+      z: 11
+    - x: 8
+      y: 6
+      z: 9
+    - x: 8
+      y: 6
+      z: 10
+    - x: 8
+      y: 6
+      z: 11
+    - x: 8
+      y: 4
+      z: 9
+    - x: 8
+      y: 4
+      z: 10
+    - x: 8
+      y: 4
+      z: 11
+    - x: 10
+      y: 5
+      z: 10
+    - x: 10
+      y: 5
+      z: 9
+    - x: 10
+      y: 5
+      z: 11
+    - x: 10
+      y: 6
+      z: 9
+    - x: 10
+      y: 6
+      z: 10
+    - x: 10
+      y: 6
+      z: 11
+    - x: 10
+      y: 4
+      z: 11
+    - x: 10
+      y: 4
+      z: 9
+    - x: 10
+      y: 4
+      z: 10
+    - x: 11
+      y: 5
+      z: 10
+    - x: 11
+      y: 5
+      z: 9
+    - x: 11
+      y: 5
+      z: 11
+    - x: 11
+      y: 6
+      z: 9
+    - x: 11
+      y: 6
+      z: 10
+    - x: 11
+      y: 6
+      z: 11
+    - x: 11
+      y: 4
+      z: 9
+    - x: 11
+      y: 4
+      z: 10
+    - x: 11
+      y: 4
+      z: 11
+    - x: 7
+      y: 5
+      z: 10
+    - x: 12
+      y: 5
+      z: 10
+    weightValues:
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 0
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 0
+      weight_XY_Z: 0
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 0
+    - weightXYZ: 0
+      weight_XYZ: 1
+      weightX_YZ: 0
+      weightXY_Z: 0
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 0
+      weight_X_Y_Z: 1
+  edit_weightMesh: []
+  edit_weightColorTexture: {fileID: 0}
+  edit_disablePositionAnimation: 1
+  edit_disableRotationAnimation: 0
+  edit_disableScaleAnimation: 1
+  edit_mirrorSetBoneAnimation: 1
+  edit_mirrorSetBonePosition: 1
+  edit_mirrorSetBoneWeight: 0
+  edit_objectFoldout: 1
+--- !u!1 &698996001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000011371498550, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 698996002}
+  - component: {fileID: 698996003}
+  m_Layer: 0
+  m_Name: LeftShoulder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &698996002
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000012993338172, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 698996001}
+  m_LocalRotation: {x: 0.5990826, y: 0.3031096, z: -0.55768746, w: 0.48806697}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 680531691}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &698996003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000010525486058, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 698996001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorBone: {fileID: 1044882890}
+  boneIndex: 3
+  bonePositionSave: 1
+  bonePosition: {x: -2, y: 0, z: 0}
+  boneRotation: {x: 0, y: 0, z: 0, w: 0}
+  weightData:
+    weightKeys:
+    - x: 7
+      y: 5
+      z: 10
+    - x: 6
+      y: 5
+      z: 10
+    weightValues:
+    - weightXYZ: 0
+      weight_XYZ: 1
+      weightX_YZ: 0
+      weightXY_Z: 0
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 0
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+  edit_weightMesh: []
+  edit_weightColorTexture: {fileID: 0}
+  edit_disablePositionAnimation: 1
+  edit_disableRotationAnimation: 0
+  edit_disableScaleAnimation: 1
+  edit_mirrorSetBoneAnimation: 0
+  edit_mirrorSetBonePosition: 1
+  edit_mirrorSetBoneWeight: 1
+  edit_objectFoldout: 1
+--- !u!1 &729456597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000010708376032, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 729456598}
+  - component: {fileID: 729456599}
+  m_Layer: 0
+  m_Name: Hips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &729456598
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000012924563998, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 729456597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 680531691}
+  - {fileID: 2028171168}
+  - {fileID: 1742776573}
+  m_Father: {fileID: 1346954821}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &729456599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000014289031316, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 729456597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorBone: {fileID: 0}
+  boneIndex: 0
+  bonePositionSave: 1
+  bonePosition: {x: 0, y: 3.5, z: 0}
+  boneRotation: {x: 0, y: 0, z: 0, w: 0}
+  weightData:
+    weightKeys: []
+    weightValues: []
+  edit_weightMesh: []
+  edit_weightColorTexture: {fileID: 0}
+  edit_disablePositionAnimation: 0
+  edit_disableRotationAnimation: 0
+  edit_disableScaleAnimation: 1
+  edit_mirrorSetBoneAnimation: 1
+  edit_mirrorSetBonePosition: 1
+  edit_mirrorSetBoneWeight: 0
+  edit_objectFoldout: 1
 --- !u!1 &833783436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,7 +1361,89 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 839096926}
---- !u!1 &1131044651
+--- !u!1 &1044882888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000012571940286, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1044882889}
+  - component: {fileID: 1044882890}
+  m_Layer: 0
+  m_Name: RightShoulder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044882889
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000014036545522, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 1044882888}
+  m_LocalRotation: {x: -0.4908342, y: -0.5712536, z: -0.29022098, w: 0.5903583}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 680531691}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044882890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000010344281482, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 1044882888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorBone: {fileID: 698996003}
+  boneIndex: 4
+  bonePositionSave: 1
+  bonePosition: {x: 2, y: 0, z: 0}
+  boneRotation: {x: 0, y: 0, z: 0, w: 0}
+  weightData:
+    weightKeys:
+    - x: 12
+      y: 5
+      z: 10
+    - x: 13
+      y: 5
+      z: 10
+    weightValues:
+    - weightXYZ: 1
+      weight_XYZ: 0
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 0
+      weight_XY_Z: 0
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 0
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+  edit_weightMesh: []
+  edit_weightColorTexture: {fileID: 0}
+  edit_disablePositionAnimation: 1
+  edit_disableRotationAnimation: 0
+  edit_disableScaleAnimation: 1
+  edit_mirrorSetBoneAnimation: 0
+  edit_mirrorSetBonePosition: 1
+  edit_mirrorSetBoneWeight: 1
+  edit_objectFoldout: 1
+--- !u!1 &1273759647
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1000010926870392, guid: fdbefd70b358ecd4d9765713c0285894,
@@ -1257,8 +1451,8 @@ GameObject:
   m_PrefabInternal: {fileID: 1692373433}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1131044652}
-  - component: {fileID: 1131044653}
+  - component: {fileID: 1273759648}
+  - component: {fileID: 1273759649}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1266,27 +1460,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1131044652
+--- !u!4 &1273759648
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4000011462846706, guid: fdbefd70b358ecd4d9765713c0285894,
     type: 2}
   m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 1131044651}
+  m_GameObject: {fileID: 1273759647}
   m_LocalRotation: {x: -0.38268277, y: -0, z: -0, w: 0.92387986}
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2121728554}
+  m_Father: {fileID: 680531691}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1131044653
+--- !u!114 &1273759649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114000012470008830, guid: fdbefd70b358ecd4d9765713c0285894,
     type: 2}
   m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 1131044651}
+  m_GameObject: {fileID: 1273759647}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
@@ -4411,97 +4605,455 @@ MonoBehaviour:
   edit_mirrorSetBonePosition: 1
   edit_mirrorSetBoneWeight: 0
   edit_objectFoldout: 1
---- !u!1 &1352425786
+--- !u!1 &1346954815
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1000013950834432, guid: fdbefd70b358ecd4d9765713c0285894,
+  m_PrefabParentObject: {fileID: 1000012392585416, guid: fdbefd70b358ecd4d9765713c0285894,
     type: 2}
   m_PrefabInternal: {fileID: 1692373433}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1352425788}
-  - component: {fileID: 1352425787}
+  - component: {fileID: 1346954821}
+  - component: {fileID: 1346954820}
+  - component: {fileID: 1346954819}
+  - component: {fileID: 1346954818}
+  - component: {fileID: 1346954817}
+  - component: {fileID: 1346954816}
   m_Layer: 0
-  m_Name: RightUpperLeg
+  m_Name: ExplosionPrefabObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1352425787
+--- !u!114 &1346954816
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010467188924, guid: fdbefd70b358ecd4d9765713c0285894,
+  m_PrefabParentObject: {fileID: 114000013987216644, guid: fdbefd70b358ecd4d9765713c0285894,
     type: 2}
   m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 1352425786}
-  m_Enabled: 1
+  m_GameObject: {fileID: 1346954815}
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
+  m_Script: {fileID: 11500000, guid: 78b5a2334401d124a851a06e5bbf371e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mirrorBone: {fileID: 1477227916}
-  boneIndex: 6
-  bonePositionSave: 1
-  bonePosition: {x: 1.5, y: -1, z: 0}
-  boneRotation: {x: 0, y: 0, z: 0, w: 0}
-  weightData:
-    weightKeys:
-    - x: 11
-      y: 1
-      z: 10
-    - x: 11
-      y: 2
-      z: 10
-    - x: 11
-      y: 0
-      z: 10
-    weightValues:
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 0
-      weight_XYZ: 0
-      weightX_YZ: 1
-      weightXY_Z: 0
-      weight_X_YZ: 1
-      weight_XY_Z: 0
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-  edit_weightMesh: []
-  edit_weightColorTexture: {fileID: 0}
-  edit_disablePositionAnimation: 1
-  edit_disableRotationAnimation: 0
-  edit_disableScaleAnimation: 1
-  edit_mirrorSetBoneAnimation: 1
-  edit_mirrorSetBonePosition: 1
-  edit_mirrorSetBoneWeight: 1
-  edit_objectFoldout: 1
---- !u!4 &1352425788
-Transform:
+  edit_autoGenerate: 1
+  edit_fileRefreshLastTimeTicks: 636434208139685051
+  edit_generateFoldout: 1
+  edit_settingsFoldout: 1
+  edit_previewFoldout: 1
+  edit_birthRate: 1
+  edit_visibleOnly: 1
+  edit_velocityMin: 10
+  edit_velocityMax: 30
+  edit_explosionTime: 0
+  edit_explosionLifeTime: 3
+  edit_autoSetExplosionCenter: 1
+  explosionCenter: {x: 0, y: 0, z: 0}
+  explosionRotate: 10
+  meshes:
+  - mesh: {fileID: 4304156, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+    materialIndexes: 00000000
+    bakeMesh: {fileID: 4311766, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+  materials:
+  - {fileID: 2129114, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+  edit_bakeFoldout: 1
+--- !u!64 &1346954817
+MeshCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4000010147852228, guid: fdbefd70b358ecd4d9765713c0285894,
+  m_PrefabParentObject: {fileID: 64000010434256532, guid: fdbefd70b358ecd4d9765713c0285894,
     type: 2}
   m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 1352425786}
-  m_LocalRotation: {x: 0, y: 0, z: -0.2588186, w: 0.96592593}
-  m_LocalPosition: {x: 1.5, y: -1, z: 0}
+  m_GameObject: {fileID: 1346954815}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4309328, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+--- !u!95 &1346954818
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 95000011638939884, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 1346954815}
+  m_Enabled: 1
+  m_Avatar: {fileID: 90000013805267036, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5b35acdd13ce84449ab36078d7974c72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1346954819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000014084747336, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 1346954815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fb345c042789f47964ec23c60c7fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedMode: 0
+  voxelFilePath: D:/Program/Unity/VoxelImporter/Assets/VoxelImporter/Examples/VoxelFiles/SD
+    Human.vox
+  voxelFileGUID: 
+  voxelFileObject: {fileID: 102900000, guid: 01b362e6f676db244a593f297c946457, type: 3}
+  voxelFileSubIndex: 0
+  fileType: 0
+  fileRefreshLastTimeTicks: 636434208139685051
+  dataVersion: 0
+  legacyVoxImport: 0
+  importMode: 1
+  importFlags: 0
+  importScale: {x: 1, y: 1, z: 1}
+  importOffset: {x: 0, y: 0, z: 0}
+  localOffset: {x: -10, y: 0, z: -10.5}
+  enableFaceFlags: -1
+  combineFaces: 1
+  ignoreCavity: 1
+  voxelStructure: {fileID: 0}
+  generateLightmapUVs: 0
+  meshFaceVertexOffset: 0
+  generateMipMaps: 1
+  updateMeshRendererMaterials: 1
+  updateMaterialTexture: 1
+  loadFromVoxelFile: 0
+  materialData:
+  - materialList: []
+    name: 
+    transparent: 0
+    material:
+      renderingMode: 0
+      metallic: 0
+      smoothness: 0
+      alpha: 0
+      emission: {r: 0, g: 0, b: 0, a: 0}
+      emissionPower: 0
+  materialIndexes: 00000000
+  edit_importFoldout: 1
+  edit_objectFoldout: 1
+  edit_helpEnable: 0
+  edit_configureMode: 0
+  edit_configureMaterialIndex: 0
+  edit_materialMode: 0
+  edit_materialTypeMode: 0
+  edit_MaterialPreviewMode: 0
+  edit_snapToHalfVoxel: 1
+  edit_enableMesh: []
+  mesh: {fileID: 4309328, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2199730, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+  atlasTexture: {fileID: 2890966, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+  rigAnimationType: 1
+  avatar: {fileID: 90000013805267036, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+  updateAnimatorAvatar: 1
+  humanDescription:
+    firstAutomapDone: 0
+    bones:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    upperArmTwist: 0.5
+    lowerArmTwist: 0.5
+    upperLegTwist: 0.5
+    lowerLegTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    hasTranslationDoF: 0
+  skinnedMeshBoundsUpdate: 1
+  skinnedMeshBoundsUpdateScale: {x: 1.5, y: 1.5, z: 1.5}
+  bones:
+  - {fileID: 729456599}
+  - {fileID: 680531692}
+  - {fileID: 1273759649}
+  - {fileID: 698996003}
+  - {fileID: 1044882890}
+  - {fileID: 2028171169}
+  - {fileID: 1742776572}
+  bindposes:
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -3.5
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -5.5
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -7.5
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 2
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -5.5
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -2
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -5.5
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 1.5
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -2.5
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -1.5
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -2.5
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  editMode: 0
+  editLastMode: 1
+  edit_voxelMode: 1
+  edit_voxelWeightMode: 1
+  edit_vertexWeightMode: 0
+  edit_blendMode: 2
+  edit_weight: 1
+  edit_autoNormalize: 1
+  edit_brushRadius: 10
+  edit_brushCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  edit_WeightPreviewMode: 0
+  edit_mirrorPosition: 020000000100000001000000
+  edit_mirrorRotation: 000000000100000001000000
+  edit_mirrorScale: 010000000100000001000000
+  edit_animationFoldout: 1
+--- !u!137 &1346954820
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 137000011843953660, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 1346954815}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2199730, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4309328, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
+  m_Bones:
+  - {fileID: 729456598}
+  - {fileID: 680531691}
+  - {fileID: 1273759648}
+  - {fileID: 698996002}
+  - {fileID: 1044882889}
+  - {fileID: 2028171168}
+  - {fileID: 1742776573}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 729456598}
+  m_AABB:
+    m_Center: {x: 0, y: 4, z: -0.5}
+    m_Extent: {x: 9, y: 11.25, z: 6}
+  m_DirtyAABB: 0
+--- !u!4 &1346954821
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000010861224954, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 1346954815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 350210555}
+  m_Children:
+  - {fileID: 729456598}
+  m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1396861823
@@ -4640,99 +5192,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1477227914
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1000011876665242, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1477227915}
-  - component: {fileID: 1477227916}
-  m_Layer: 0
-  m_Name: LeftUpperLeg
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1477227915
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4000012527790354, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 1477227914}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2588186, w: 0.965926}
-  m_LocalPosition: {x: -1.5, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 350210555}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1477227916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000012516799878, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 1477227914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mirrorBone: {fileID: 1352425787}
-  boneIndex: 5
-  bonePositionSave: 1
-  bonePosition: {x: -1.5, y: -1, z: 0}
-  boneRotation: {x: 0, y: 0, z: 0, w: 0}
-  weightData:
-    weightKeys:
-    - x: 8
-      y: 1
-      z: 10
-    - x: 8
-      y: 2
-      z: 10
-    - x: 8
-      y: 0
-      z: 10
-    weightValues:
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 0
-      weight_XYZ: 0
-      weightX_YZ: 1
-      weightXY_Z: 0
-      weight_X_YZ: 1
-      weight_XY_Z: 0
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-  edit_weightMesh: []
-  edit_weightColorTexture: {fileID: 0}
-  edit_disablePositionAnimation: 1
-  edit_disableRotationAnimation: 0
-  edit_disableScaleAnimation: 1
-  edit_mirrorSetBoneAnimation: 1
-  edit_mirrorSetBonePosition: 1
-  edit_mirrorSetBoneWeight: 1
-  edit_objectFoldout: 1
 --- !u!1 &1483168825
 GameObject:
   m_ObjectHideFlags: 0
@@ -4802,88 +5261,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1483168825}
---- !u!1 &1488346779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1000012571940286, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1488346780}
-  - component: {fileID: 1488346781}
-  m_Layer: 0
-  m_Name: RightShoulder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1488346780
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4000014036545522, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 1488346779}
-  m_LocalRotation: {x: -0.4908342, y: -0.5712536, z: -0.29022098, w: 0.5903583}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2121728554}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1488346781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010344281482, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 1488346779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mirrorBone: {fileID: 1884059051}
-  boneIndex: 4
-  bonePositionSave: 1
-  bonePosition: {x: 2, y: 0, z: 0}
-  boneRotation: {x: 0, y: 0, z: 0, w: 0}
-  weightData:
-    weightKeys:
-    - x: 12
-      y: 5
-      z: 10
-    - x: 13
-      y: 5
-      z: 10
-    weightValues:
-    - weightXYZ: 1
-      weight_XYZ: 0
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 0
-      weight_XY_Z: 0
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 0
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-  edit_weightMesh: []
-  edit_weightColorTexture: {fileID: 0}
-  edit_disablePositionAnimation: 1
-  edit_disableRotationAnimation: 0
-  edit_disableScaleAnimation: 1
-  edit_mirrorSetBoneAnimation: 0
-  edit_mirrorSetBonePosition: 1
-  edit_mirrorSetBoneWeight: 1
-  edit_objectFoldout: 1
 --- !u!1 &1628238943
 GameObject:
   m_ObjectHideFlags: 0
@@ -4999,8 +5376,101 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fdbefd70b358ecd4d9765713c0285894, type: 2}
-  m_RootGameObject: {fileID: 180634326}
+  m_RootGameObject: {fileID: 1346954815}
   m_IsPrefabParent: 0
+--- !u!1 &1742776571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000013950834432, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1742776573}
+  - component: {fileID: 1742776572}
+  m_Layer: 0
+  m_Name: RightUpperLeg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1742776572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000010467188924, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 1742776571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorBone: {fileID: 2028171169}
+  boneIndex: 6
+  bonePositionSave: 1
+  bonePosition: {x: 1.5, y: -1, z: 0}
+  boneRotation: {x: 0, y: 0, z: 0, w: 0}
+  weightData:
+    weightKeys:
+    - x: 11
+      y: 1
+      z: 10
+    - x: 11
+      y: 2
+      z: 10
+    - x: 11
+      y: 0
+      z: 10
+    weightValues:
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 0
+      weight_XYZ: 0
+      weightX_YZ: 1
+      weightXY_Z: 0
+      weight_X_YZ: 1
+      weight_XY_Z: 0
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+  edit_weightMesh: []
+  edit_weightColorTexture: {fileID: 0}
+  edit_disablePositionAnimation: 1
+  edit_disableRotationAnimation: 0
+  edit_disableScaleAnimation: 1
+  edit_mirrorSetBoneAnimation: 1
+  edit_mirrorSetBonePosition: 1
+  edit_mirrorSetBoneWeight: 1
+  edit_objectFoldout: 1
+--- !u!4 &1742776573
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000010147852228, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 1742776571}
+  m_LocalRotation: {x: 0, y: 0, z: -0.2588186, w: 0.96592593}
+  m_LocalPosition: {x: 1.5, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 729456598}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848601358
 GameObject:
   m_ObjectHideFlags: 0
@@ -5097,88 +5567,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1884059049
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1000011371498550, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1884059050}
-  - component: {fileID: 1884059051}
-  m_Layer: 0
-  m_Name: LeftShoulder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1884059050
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4000012993338172, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 1884059049}
-  m_LocalRotation: {x: 0.5990826, y: 0.3031096, z: -0.55768746, w: 0.48806697}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2121728554}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1884059051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000010525486058, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 1884059049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mirrorBone: {fileID: 1488346781}
-  boneIndex: 3
-  bonePositionSave: 1
-  bonePosition: {x: -2, y: 0, z: 0}
-  boneRotation: {x: 0, y: 0, z: 0, w: 0}
-  weightData:
-    weightKeys:
-    - x: 7
-      y: 5
-      z: 10
-    - x: 6
-      y: 5
-      z: 10
-    weightValues:
-    - weightXYZ: 0
-      weight_XYZ: 1
-      weightX_YZ: 0
-      weightXY_Z: 0
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 0
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-  edit_weightMesh: []
-  edit_weightColorTexture: {fileID: 0}
-  edit_disablePositionAnimation: 1
-  edit_disableRotationAnimation: 0
-  edit_disableScaleAnimation: 1
-  edit_mirrorSetBoneAnimation: 0
-  edit_mirrorSetBonePosition: 1
-  edit_mirrorSetBoneWeight: 1
-  edit_objectFoldout: 1
 --- !u!1 &2022220309
 GameObject:
   m_ObjectHideFlags: 0
@@ -5271,6 +5659,99 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
+--- !u!1 &2028171167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000011876665242, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2028171168}
+  - component: {fileID: 2028171169}
+  m_Layer: 0
+  m_Name: LeftUpperLeg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2028171168
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000012527790354, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 2028171167}
+  m_LocalRotation: {x: -0, y: -0, z: 0.2588186, w: 0.965926}
+  m_LocalPosition: {x: -1.5, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 729456598}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2028171169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000012516799878, guid: fdbefd70b358ecd4d9765713c0285894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692373433}
+  m_GameObject: {fileID: 2028171167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorBone: {fileID: 1742776572}
+  boneIndex: 5
+  bonePositionSave: 1
+  bonePosition: {x: -1.5, y: -1, z: 0}
+  boneRotation: {x: 0, y: 0, z: 0, w: 0}
+  weightData:
+    weightKeys:
+    - x: 8
+      y: 1
+      z: 10
+    - x: 8
+      y: 2
+      z: 10
+    - x: 8
+      y: 0
+      z: 10
+    weightValues:
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 0
+      weight_XYZ: 0
+      weightX_YZ: 1
+      weightXY_Z: 0
+      weight_X_YZ: 1
+      weight_XY_Z: 0
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+    - weightXYZ: 1
+      weight_XYZ: 1
+      weightX_YZ: 1
+      weightXY_Z: 1
+      weight_X_YZ: 1
+      weight_XY_Z: 1
+      weightX_Y_Z: 1
+      weight_X_Y_Z: 1
+  edit_weightMesh: []
+  edit_weightColorTexture: {fileID: 0}
+  edit_disablePositionAnimation: 1
+  edit_disableRotationAnimation: 0
+  edit_disableScaleAnimation: 1
+  edit_mirrorSetBoneAnimation: 1
+  edit_mirrorSetBonePosition: 1
+  edit_mirrorSetBoneWeight: 1
+  edit_objectFoldout: 1
 --- !u!1 &2057485948
 GameObject:
   m_ObjectHideFlags: 0
@@ -5339,484 +5820,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2057485948}
---- !u!1 &2121728553
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1000013134529980, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2121728554}
-  - component: {fileID: 2121728555}
-  m_Layer: 0
-  m_Name: Chest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2121728554
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4000014038427910, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 2121728553}
-  m_LocalRotation: {x: -0.2588186, y: -0, z: -0, w: 0.965926}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1131044652}
-  - {fileID: 1884059050}
-  - {fileID: 1488346780}
-  m_Father: {fileID: 350210555}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2121728555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114000012679857408, guid: fdbefd70b358ecd4d9765713c0285894,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692373433}
-  m_GameObject: {fileID: 2121728553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 816af18d04417a84cae484da8174537d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mirrorBone: {fileID: 0}
-  boneIndex: 1
-  bonePositionSave: 1
-  bonePosition: {x: 0, y: 2, z: 0}
-  boneRotation: {x: 0, y: 0, z: 0, w: 0}
-  weightData:
-    weightKeys:
-    - x: 9
-      y: 6
-      z: 11
-    - x: 9
-      y: 6
-      z: 9
-    - x: 9
-      y: 6
-      z: 10
-    - x: 9
-      y: 5
-      z: 10
-    - x: 9
-      y: 5
-      z: 9
-    - x: 9
-      y: 5
-      z: 11
-    - x: 9
-      y: 4
-      z: 9
-    - x: 9
-      y: 4
-      z: 10
-    - x: 9
-      y: 4
-      z: 11
-    - x: 8
-      y: 5
-      z: 10
-    - x: 8
-      y: 5
-      z: 9
-    - x: 8
-      y: 5
-      z: 11
-    - x: 8
-      y: 6
-      z: 9
-    - x: 8
-      y: 6
-      z: 10
-    - x: 8
-      y: 6
-      z: 11
-    - x: 8
-      y: 4
-      z: 9
-    - x: 8
-      y: 4
-      z: 10
-    - x: 8
-      y: 4
-      z: 11
-    - x: 10
-      y: 5
-      z: 10
-    - x: 10
-      y: 5
-      z: 9
-    - x: 10
-      y: 5
-      z: 11
-    - x: 10
-      y: 6
-      z: 9
-    - x: 10
-      y: 6
-      z: 10
-    - x: 10
-      y: 6
-      z: 11
-    - x: 10
-      y: 4
-      z: 11
-    - x: 10
-      y: 4
-      z: 9
-    - x: 10
-      y: 4
-      z: 10
-    - x: 11
-      y: 5
-      z: 10
-    - x: 11
-      y: 5
-      z: 9
-    - x: 11
-      y: 5
-      z: 11
-    - x: 11
-      y: 6
-      z: 9
-    - x: 11
-      y: 6
-      z: 10
-    - x: 11
-      y: 6
-      z: 11
-    - x: 11
-      y: 4
-      z: 9
-    - x: 11
-      y: 4
-      z: 10
-    - x: 11
-      y: 4
-      z: 11
-    - x: 7
-      y: 5
-      z: 10
-    - x: 12
-      y: 5
-      z: 10
-    weightValues:
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 1
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 1
-    - weightXYZ: 1
-      weight_XYZ: 0
-      weightX_YZ: 1
-      weightXY_Z: 1
-      weight_X_YZ: 0
-      weight_XY_Z: 0
-      weightX_Y_Z: 1
-      weight_X_Y_Z: 0
-    - weightXYZ: 0
-      weight_XYZ: 1
-      weightX_YZ: 0
-      weightXY_Z: 0
-      weight_X_YZ: 1
-      weight_XY_Z: 1
-      weightX_Y_Z: 0
-      weight_X_Y_Z: 1
-  edit_weightMesh: []
-  edit_weightColorTexture: {fileID: 0}
-  edit_disablePositionAnimation: 1
-  edit_disableRotationAnimation: 0
-  edit_disableScaleAnimation: 1
-  edit_mirrorSetBoneAnimation: 1
-  edit_mirrorSetBonePosition: 1
-  edit_mirrorSetBoneWeight: 0
-  edit_objectFoldout: 1

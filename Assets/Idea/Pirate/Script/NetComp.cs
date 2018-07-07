@@ -14,7 +14,8 @@ class NetComp
 {
     private ConcurrentQueue<byte[]> sendQueue = new ConcurrentQueue<byte[]>();
     private ConcurrentQueue<byte[]> recvQueue = new ConcurrentQueue<byte[]>();
-    private string ip = "192.168.1.118";
+    private string ip = "52.90.82.200";
+    //private string ip = "127.0.0.1";
     private int port = 8080;
     private string state = "stop";
     private Thread thread;

@@ -5,6 +5,7 @@
 [Bb]uilds/
 [Pp]ackages/
 Assets/AssetStoreTools*
+.*.swp
 
 # Visual Studio cache directory
 .vs/
