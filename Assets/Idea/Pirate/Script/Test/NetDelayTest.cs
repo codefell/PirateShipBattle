@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NetDelayTest : MonoBehaviour {
 
-    //private NetComp netComp;
-    private KcpNetComp netComp;
+    private NetComp netComp;
+    //private KcpNetComp netComp;
     public float sendInterval = 1;
     public float sampleInterval = 1;
     private int index = 0;
@@ -14,8 +14,8 @@ public class NetDelayTest : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //netComp = new NetComp();
-        netComp = new KcpNetComp(123);
+        netComp = new NetComp();
+        //netComp = new KcpNetComp(123);
         netComp.Start();
         StartCoroutine(SendCo());
         StartCoroutine(SampleCo());
@@ -40,7 +40,7 @@ public class NetDelayTest : MonoBehaviour {
             if (netComp.State == "connected")
             {
                 List<string> msgList = netComp.RecvString();
-                singal = msgList.Count / 2f;
+                singal = msgList.Count / 5f;
             }
             yield return new WaitForSeconds(sampleInterval);
         }
