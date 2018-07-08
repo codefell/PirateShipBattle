@@ -8,7 +8,7 @@ public class KcpTest : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        kcpNetComp = new KcpNetComp(123);
+        kcpNetComp = new KcpNetComp("127.0.0.1", 8080, 123);
         kcpNetComp.Start();
         StartCoroutine(SendCo());
 	}

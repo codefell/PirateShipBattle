@@ -68,7 +68,7 @@ public class GameCtrl : MonoBehaviour {
             {"bullet_hit", this.OnBulletHit},
         };
 
-        netComp = new NetComp();
+        netComp = new NetComp("127.0.0.1", 8080);
         netComp.Start();
     }
 

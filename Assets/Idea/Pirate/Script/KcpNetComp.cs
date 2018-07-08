@@ -23,12 +23,13 @@ public class KcpNetComp {
     private UdpClient udpClient;
     private string state = "stop";
     private Thread thread;
-    //public string ip = "127.0.0.1";
-    public string ip = "52.90.82.200";
-    public int port = 8080;
+    public string ip;
+    public int port;
     private IPEndPoint remoteIpEndpoint = new IPEndPoint(IPAddress.Any, 0);
 
-    public KcpNetComp(uint conv) {
+    public KcpNetComp(string ip, int port, uint conv) {
+        this.ip = ip;
+        this.port = port;
         kcp = new KCP(conv, SendBuff);
         kcp.NoDelay(1, 10, 2, 1);
         thread = new Thread(Run);

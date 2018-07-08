@@ -14,9 +14,8 @@ class NetComp
 {
     private ConcurrentQueue<byte[]> sendQueue = new ConcurrentQueue<byte[]>();
     private ConcurrentQueue<byte[]> recvQueue = new ConcurrentQueue<byte[]>();
-    private string ip = "52.90.82.200";
-    //private string ip = "127.0.0.1";
-    private int port = 8080;
+    private string ip;
+    private int port;
     private string state = "stop";
     private Thread thread;
     private Socket socket;
@@ -29,7 +28,9 @@ class NetComp
     private byte[] writeBuff;
     private int writeOffset = 0;
 
-    public NetComp() {
+    public NetComp(string ip, int port) {
+        this.ip = ip;
+        this.port = port;
         thread = new Thread(Run);
     }
 
