@@ -14,6 +14,7 @@ public class GameCtrl : MonoBehaviour {
 
     private int player_id = 0; 
     private int ship_id = 0; 
+    //Use kcp/udp as connection
     private KcpUdpNetComp netComp;
     private List<JsonData> recvMsgList = new List<JsonData>();
 
