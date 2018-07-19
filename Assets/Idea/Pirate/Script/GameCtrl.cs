@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
+using System.Text;
 using LitJson;
 
 #if UNITY_EDITOR
@@ -12,7 +14,7 @@ public class GameCtrl : MonoBehaviour {
 
     private int player_id = 0; 
     private int ship_id = 0; 
-    private NetComp netComp;
+    private KcpUdpNetComp netComp;
     private List<JsonData> recvMsgList = new List<JsonData>();
 
     private delegate void MsgResHandle(JsonData msg);
@@ -53,7 +55,7 @@ public class GameCtrl : MonoBehaviour {
         msg["speed"] = shell_speed;
         msg["radius"] = shell_radius;
         msg["cannon_id"] = cannon_id;
-        netComp.SendJson(msg);
+        netComp.SendJson(msg, 1);
     }
 
     void Start()
@@ -67,9 +69,35 @@ public class GameCtrl : MonoBehaviour {
             {"fire_bullet", this.OnFireBullet},
             {"bullet_hit", this.OnBulletHit},
         };
+        StartCoroutine(StartConnCo());
+    }
 
-        netComp = new NetComp("127.0.0.1", 8080);
-        netComp.Start();
+    IEnumerator StartConnCo()
+    {
+        JsonData jd = new JsonData();
+        jd["hello"] = "world";
+        jd["python"] = "ipython";
+        byte[] buff = Encoding.UTF8.GetBytes(jd.ToJson());
+        using (UnityWebRequest req = UnityWebRequest.Put("http://localhost:8080/api/login", buff))
+        {
+            req.SetRequestHeader("Content-Type", "application/json");
+            Debug.Log("send request");
+            yield return req.SendWebRequest();
+            Debug.Log("send request end");
+            if (req.isNetworkError || req.isHttpError)
+            {
+                Debug.Log(req.error);
+            }
+            else
+            {
+                JsonData json = JsonMapper.ToObject(req.downloadHandler.text);
+                string token = json["token"].ToString();
+                Debug.Log("fetch token complete " + token);
+                netComp = new KcpUdpNetComp("127.0.0.1", 8080,
+                    token, new List<byte>(), new List<byte> { 1 });
+                netComp.Start();
+            }
+        }
     }
 
     public void ReqLogin()
@@ -78,14 +106,14 @@ public class GameCtrl : MonoBehaviour {
         login = true;
         JsonData msg = new JsonData();
         msg["type"] = "login";
-        netComp.SendJson(msg);
+        netComp.SendJson(msg, 1);
     }
 
     public void ReqSetAngularVel(int id, float omega) {
         JsonData msg = new JsonData();
         msg["type"] = "set_angular_vel";
         msg["omega"] = (double)omega;
-        netComp.SendJson(msg);
+        netComp.SendJson(msg, 1);
     }
 
     public void ReqSetVel(int id, float x, float y) {
@@ -94,7 +122,7 @@ public class GameCtrl : MonoBehaviour {
         msg["id"] = id;
         msg["x"] = (double)x;
         msg["y"] = (double)y;
-        netComp.SendJson(msg);
+        netComp.SendJson(msg, 1);
     }
 
     public void ReqSetSpeed(int id, float speed) {
@@ -102,7 +130,7 @@ public class GameCtrl : MonoBehaviour {
         msg["type"] = "set_speed";
         msg["id"] = id;
         msg["speed"] = speed;
-        netComp.SendJson(msg);
+        netComp.SendJson(msg, 1);
     }
 
     private int GetJsonInt(JsonData json, string key) {
@@ -206,12 +234,18 @@ public class GameCtrl : MonoBehaviour {
 
     private void OnDestroy()
     {
-        netComp.End();
+        if (netComp != null)
+        {
+            netComp.End();
+        }
     }
 
     public void End()
     {
-        netComp.End();
+        if (netComp != null)
+        {
+            netComp.End();
+        }
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
@@ -259,7 +293,10 @@ public class GameCtrl : MonoBehaviour {
     {
         foreach (var msg in netComp.RecvJson())
         {
-            DispatchMsg(msg);
+            if ((byte)msg["channel"] == 1)
+            {
+                DispatchMsg(msg["msg"]);
+            }
         }
     }
 
@@ -298,6 +335,9 @@ public class GameCtrl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        UpdateNet();
+        if (netComp != null && netComp.State == KcpUdpNetComp.CompState.data)
+        {
+            UpdateNet();
+        }
     }
 }

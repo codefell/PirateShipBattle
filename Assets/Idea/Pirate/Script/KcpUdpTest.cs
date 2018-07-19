@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
+using LitJson;
 
 public class KcpUdpTest : MonoBehaviour {
     public bool use_ec2 = false;
@@ -35,7 +37,28 @@ public class KcpUdpTest : MonoBehaviour {
 
     void Start()
     {
+        StartCoroutine(LoginCo());
+    }
 
+    IEnumerator LoginCo()
+    {
+        JsonData jd = new JsonData();
+        jd["hello"] = "world";
+        jd["python"] = "ipython";
+        byte[] buff = Encoding.UTF8.GetBytes(jd.ToJson());
+        using (UnityWebRequest req = UnityWebRequest.Put("http://localhost:8080/api/login", buff))
+        {
+            req.SetRequestHeader("Content-Type", "application/json");
+            yield return req.SendWebRequest();
+            if (req.isNetworkError || req.isHttpError)
+            {
+                Debug.Log(req.error);
+            }
+            else
+            {
+                Debug.Log("complete " + req.downloadHandler.text);
+            }
+        }
     }
 
     public void Init () {

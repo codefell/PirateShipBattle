@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Idea/Pirate/Scene/KcpTest.unity
-    guid: 9de260e46607e44c580079cefaae781b
+    path: Assets/Idea/Pirate/Scene/Main.unity
+    guid: af4ac6b09bed5468bb56c6714b5717ec
   m_configObjects: {}

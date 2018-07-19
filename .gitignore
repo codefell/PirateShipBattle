@@ -4,7 +4,10 @@
 [Bb]uild/
 [Bb]uilds/
 [Pp]ackages/
-Assets/AssetStoreTools*
+Assets/AssetStoreTools/
+Assets/VoxelImporter/
+*.meta
+*.unity
 .*.swp
 *.meta
 

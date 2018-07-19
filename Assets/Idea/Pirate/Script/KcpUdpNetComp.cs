@@ -7,6 +7,7 @@ using System.Threading;
 using System;
 using System.Text;
 using UnityEngine;
+using LitJson;
 
 public class KcpUdpNetComp {
     public enum CompState
@@ -259,6 +260,11 @@ public class KcpUdpNetComp {
             pendingSendBuff.Enqueue(new Packet(data, data.Length, channel));
         }
     }
+    
+    public void SendJson(JsonData json, byte channel)
+    {
+        Send(Encoding.UTF8.GetBytes(json.ToJson()), channel);
+    }
 
     public void Start()
     {
@@ -282,5 +288,19 @@ public class KcpUdpNetComp {
             packets.Add(p);
         }
         return packets;
+    }
+
+    public List<JsonData> RecvJson()
+    {
+        List<JsonData> msg_list = new List<JsonData>();
+        Packet p;
+        while (pendingRecvBuff.TryDequeue(out p))
+        {
+            JsonData jd = new JsonData();
+            jd["channel"] = p.channel;
+            jd["msg"] = JsonMapper.ToObject(Encoding.UTF8.GetString(p.data));
+            msg_list.Add(jd);
+        }
+        return msg_list;
     }
 }
