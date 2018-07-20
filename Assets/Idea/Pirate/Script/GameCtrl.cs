@@ -17,6 +17,8 @@ public class GameCtrl : MonoBehaviour {
     //Use kcp/udp as connection
     private KcpUdpNetComp netComp;
     private List<JsonData> recvMsgList = new List<JsonData>();
+    //public string server_ip = "47.94.95.39";
+    public string server_ip = "52.90.82.200";
 
     private delegate void MsgResHandle(JsonData msg);
     private Dictionary<string, MsgResHandle> msgResMap;
@@ -79,7 +81,8 @@ public class GameCtrl : MonoBehaviour {
         jd["hello"] = "world";
         jd["python"] = "ipython";
         byte[] buff = Encoding.UTF8.GetBytes(jd.ToJson());
-        using (UnityWebRequest req = UnityWebRequest.Put("http://localhost:8080/api/login", buff))
+        using (UnityWebRequest req = UnityWebRequest.Put(
+            string.Format("http://{0}:8080/api/login", server_ip), buff))
         {
             req.SetRequestHeader("Content-Type", "application/json");
             Debug.Log("send request");
@@ -94,8 +97,8 @@ public class GameCtrl : MonoBehaviour {
                 JsonData json = JsonMapper.ToObject(req.downloadHandler.text);
                 string token = json["token"].ToString();
                 Debug.Log("fetch token complete " + token);
-                netComp = new KcpUdpNetComp("127.0.0.1", 8080,
-                    token, new List<byte>(), new List<byte> { 1 });
+                netComp = new KcpUdpNetComp(server_ip, 8080,
+                    token, new List<byte> { 2 }, new List<byte> { 1 });
                 netComp.Start();
             }
         }
@@ -114,7 +117,7 @@ public class GameCtrl : MonoBehaviour {
         JsonData msg = new JsonData();
         msg["type"] = "set_angular_vel";
         msg["omega"] = (double)omega;
-        netComp.SendJson(msg, 1);
+        netComp.SendJson(msg, 2);
     }
 
     public void ReqSetVel(int id, float x, float y) {
@@ -274,30 +277,33 @@ public class GameCtrl : MonoBehaviour {
         for (int i = 0; i < count; i++)
         {
             int id = int.Parse(worldInfo[i]["id"].ToString());
-            JsonData tfm = worldInfo[i]["tfm"];
-            float x = float.Parse(tfm["x"].ToString());
-            float y = float.Parse(tfm["y"].ToString());
-            float angle = float.Parse(tfm["angle"].ToString());
-            ShipCtrl o = ship_id_to_ctrl[id];
-            Util.SetTfm(o.transform, x, y, angle);
+            if (ship_id_to_ctrl.ContainsKey(id))
+            {
+                JsonData tfm = worldInfo[i]["tfm"];
+                float x = float.Parse(tfm["x"].ToString());
+                float y = float.Parse(tfm["y"].ToString());
+                float angle = float.Parse(tfm["angle"].ToString());
+                ShipCtrl o = ship_id_to_ctrl[id];
+                Util.SetTfm(o.transform, x, y, angle);
+            }
         }
     }
 
     private void DispatchMsg(JsonData json)
     {
         string type = json["type"].ToString();
+        //if (type != "world_info")
         MsgResHandle handle = msgResMap[type];
         handle(json);
     }
 
     private void UpdateNet()
     {
-        foreach (var msg in netComp.RecvJson())
+        List<JsonData> msgList = netComp.RecvJson();
+        foreach (var msg in msgList)
         {
-            if ((byte)msg["channel"] == 1)
-            {
-                DispatchMsg(msg["msg"]);
-            }
+            //Debug.Log("recv msg " + msg.ToJson());
+            DispatchMsg(msg["msg"]);
         }
     }
 

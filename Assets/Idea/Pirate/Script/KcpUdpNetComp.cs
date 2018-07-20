@@ -131,23 +131,6 @@ public class KcpUdpNetComp {
         }
     }
 
-    private void RecvPendingBuff()
-    {
-        while (udpClient.Available > 0)
-        {
-            byte[] buff = udpClient.Receive(ref remoteEndPoint);
-            Packet packet = Packet.fromBuff(buff);
-            if (kcpChannels.ContainsKey(packet.channel))
-            {
-                kcpChannels[packet.channel].kcp.Input(packet.data);
-            }
-            else if (udpChannels.Contains(packet.channel))
-            {
-                pendingRecvBuff.Enqueue(packet);
-            }
-        }
-    }
-
     private void HandShake()
     {
         while (state == CompState.handshake)
@@ -221,7 +204,8 @@ public class KcpUdpNetComp {
             {
                 byte[] buff = new byte[peekSize];
                 kcpChannel.kcp.Recv(buff);
-                pendingRecvBuff.Enqueue(new Packet(buff, buff.Length, channel));
+                Packet p = new Packet(buff, buff.Length, channel);
+                pendingRecvBuff.Enqueue(p);
             }
         }
     }
@@ -237,7 +221,7 @@ public class KcpUdpNetComp {
                 SendPendingBuff();
                 UpdateUdp();
                 UpdateKcp();
-                autoResetEvent.WaitOne(1000 / 60);
+                autoResetEvent.WaitOne(10);
             }
         }
         catch (Exception e)
@@ -258,6 +242,7 @@ public class KcpUdpNetComp {
         if (udpChannels.Contains(channel) || kcpChannels.ContainsKey(channel))
         {
             pendingSendBuff.Enqueue(new Packet(data, data.Length, channel));
+            autoResetEvent.Set();
         }
     }
     
