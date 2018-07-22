@@ -10,6 +10,13 @@ using LitJson;
 using UnityEditor;
 #endif
 
+public class GameContext
+{
+    public float server_start_ts = 0;
+    public float client_start_ts = 0;
+    public float simu_time = 1f;
+}
+
 public class GameCtrl : MonoBehaviour {
 
     private int player_id = 0; 
@@ -17,8 +24,11 @@ public class GameCtrl : MonoBehaviour {
     //Use kcp/udp as connection
     private KcpUdpNetComp netComp;
     private List<JsonData> recvMsgList = new List<JsonData>();
-    //public string server_ip = "47.94.95.39";
-    public string server_ip = "52.90.82.200";
+    public string aliyun_ip = "47.94.95.39";
+    public string aws_ip = "52.90.82.200";
+    public string local_ip = "127.0.0.1";
+    private string server_ip;
+    private GameContext context = new GameContext();
 
     private delegate void MsgResHandle(JsonData msg);
     private Dictionary<string, MsgResHandle> msgResMap;
@@ -72,7 +82,37 @@ public class GameCtrl : MonoBehaviour {
             {"fire_bullet", this.OnFireBullet},
             {"bullet_hit", this.OnBulletHit},
         };
+        server_ip = local_ip;
+    }
+
+    public void StartGame()
+    {
+        //Debug.Log(server_ip);
         StartCoroutine(StartConnCo());
+    }
+
+    public void UseLocalIP(bool v)
+    {
+        if (v)
+        {
+            server_ip = local_ip;
+        }
+    }
+
+    public void UseAliyunIP(bool v)
+    {
+        if (v)
+        {
+            server_ip = aliyun_ip;
+        }
+    }
+
+    public void UserAwsIp(bool v)
+    {
+        if (v)
+        {
+            server_ip = aws_ip;
+        }
     }
 
     IEnumerator StartConnCo()
@@ -100,6 +140,7 @@ public class GameCtrl : MonoBehaviour {
                 netComp = new KcpUdpNetComp(server_ip, 8080,
                     token, new List<byte> { 2 }, new List<byte> { 1 });
                 netComp.Start();
+                ReqLogin();
             }
         }
     }
@@ -263,15 +304,25 @@ public class GameCtrl : MonoBehaviour {
         audio_souce.loop = true;
         audio_souce.PlayDelayed(1);
         game_start = true;
+        context.server_start_ts = float.Parse(json["ts"].ToString());
+        context.client_start_ts = Time.time;
+        foreach (var e in ship_id_to_ctrl)
+        {
+            e.Value.Init(context);
+        }
         /*
         camera_follow.look_forward = look_forward;
         camera_follow.follow_obj = shipCtrl.gameObject;
         */
-        Log("OnStart");
+        Debug.Log("OnStart");
     }
 
     private void OnWorldInfo(JsonData worldInfo)
     {
+        Debug.Log("OnWorldInfo " + worldInfo.ToJson());
+        Debug.Log(worldInfo["ts"].ToString());
+        float ts = float.Parse(worldInfo["ts"].ToString());
+        Debug.LogFormat("{0:F} {1:F}", ts, context.server_start_ts);
         worldInfo = worldInfo["world_info"];
         int count = worldInfo.Count;
         for (int i = 0; i < count; i++)
@@ -284,7 +335,8 @@ public class GameCtrl : MonoBehaviour {
                 float y = float.Parse(tfm["y"].ToString());
                 float angle = float.Parse(tfm["angle"].ToString());
                 ShipCtrl o = ship_id_to_ctrl[id];
-                Util.SetTfm(o.transform, x, y, angle);
+                o.SetWorldInfo(tfm, ts);
+                //Util.SetTfm(o.transform, x, y, angle);
             }
         }
     }
@@ -293,6 +345,7 @@ public class GameCtrl : MonoBehaviour {
     {
         string type = json["type"].ToString();
         //if (type != "world_info")
+        Debug.Log("dispatch " + json.ToJson());
         MsgResHandle handle = msgResMap[type];
         handle(json);
     }
@@ -315,6 +368,7 @@ public class GameCtrl : MonoBehaviour {
     }
 
     public void SwitchMove(bool stop_move) {
+        Debug.Log("Switch Move " + stop_move + ", " + game_start + ", " + stop_move);
         if (game_start)
         {
             if (stop_move)

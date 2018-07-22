@@ -58,6 +58,7 @@ public class KcpUdpNetComp {
             {
                 Packet p = new Packet(data, length, channel);
                 byte[] buff = p.toBuff();
+                Debug.Log("kcp send " + buff.Length + ", " + dumpBuff(buff, buff.Length));
                 sendAction(buff, buff.Length);
             });
         }
